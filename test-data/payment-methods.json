@@ -1,0 +1,25 @@
+{
+  "paymentMethods": [
+    {
+      "type": "credit",
+      "cardNumber": "4111111111111111",
+      "expiryDate": "12/25",
+      "cvv": "123",
+      "zipCode": "80246"
+    },
+    {
+      "type": "credit",
+      "cardNumber": "5555555555554444",
+      "expiryDate": "01/26",
+      "cvv": "456",
+      "zipCode": "80246"
+    },
+    {
+      "type": "debit",
+      "cardNumber": "4222222222222222",
+      "expiryDate": "06/27",
+      "cvv": "789",
+      "zipCode": "80246"
+    }
+  ]
+}

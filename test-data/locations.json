@@ -1,0 +1,34 @@
+{
+  "locations": [
+    {
+      "zipCode": "80246",
+      "type": "pickup",
+      "selectIndex": 0,
+      "expectedResults": 3
+    },
+    {
+      "zipCode": "90210",
+      "type": "pickup",
+      "selectIndex": 0,
+      "expectedResults": 2
+    },
+    {
+      "zipCode": "10001",
+      "type": "delivery",
+      "selectIndex": 1,
+      "expectedResults": 5
+    },
+    {
+      "zipCode": "60601",
+      "type": "delivery",
+      "selectIndex": 0,
+      "expectedResults": 4
+    },
+    {
+      "zipCode": "94102",
+      "type": "pickup",
+      "selectIndex": 0,
+      "expectedResults": 3
+    }
+  ]
+}

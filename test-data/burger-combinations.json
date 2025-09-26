@@ -1,0 +1,64 @@
+{
+  "burgerScenarios": [
+    {
+      "name": "Classic Double Beef",
+      "protein": "Double Beef",
+      "bun": "Classic",
+      "cheese": "American",
+      "toppings": ["Leaf Lettuce", "Tomatoes", "Red Onion"],
+      "sauces": ["Smash Sauce®"],
+      "premiumAddOns": [],
+      "quantity": 1
+    },
+    {
+      "name": "Deluxe Crispy Chicken",
+      "protein": "Crispy Chicken",
+      "bun": "Spicy Chipotle",
+      "cheese": "Aged Swiss",
+      "toppings": ["Leaf Lettuce", "Tomatoes"],
+      "sauces": ["Mayo", "Ranch"],
+      "premiumAddOns": ["Applewood Smoked Bacon", "Smashed Avocado"],
+      "quantity": 2
+    },
+    {
+      "name": "Vegetarian Black Bean",
+      "protein": "Black Bean",
+      "bun": "Classic",
+      "cheese": "Pepper Jack",
+      "toppings": ["Leaf Lettuce", "Tomatoes", "Red Onion", "Pickles"],
+      "sauces": ["Chipotle Ranch"],
+      "premiumAddOns": ["Smashed Avocado"],
+      "quantity": 1
+    },
+    {
+      "name": "Turkey Smash Club",
+      "protein": "Turkey Smash®",
+      "bun": "Classic",
+      "cheese": "Aged Cheddar",
+      "toppings": ["Leaf Lettuce", "Tomatoes"],
+      "sauces": ["Smash Sauce®"],
+      "premiumAddOns": ["Applewood Smoked Bacon"],
+      "quantity": 1
+    },
+    {
+      "name": "BBQ Bacon Single Beef",
+      "protein": "Single Beef",
+      "bun": "Classic",
+      "cheese": "Aged Cheddar",
+      "toppings": ["Red Onion", "Pickles"],
+      "sauces": ["BBQ Sauce", "Mayo"],
+      "premiumAddOns": ["Applewood Smoked Bacon"],
+      "quantity": 2
+    },
+    {
+      "name": "Spicy Jalapeño Double Chicken",
+      "protein": "Double Chicken Smash®",
+      "bun": "Spicy Chipotle",
+      "cheese": "Pepper Jack",
+      "toppings": ["Jalapeños", "Grilled Jalapenos", "Grilled Red Onions"],
+      "sauces": ["Chipotle Ranch", "Truffle Mayo"],
+      "premiumAddOns": [],
+      "quantity": 1
+    }
+  ]
+}

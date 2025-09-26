@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "menuOption": "SMASHBURGERS", "subMenuOption": "DOUBLE SMOKED BRISKET BACON SMASH®", "qty": "1" },
+    { "menuOption": "ALL-ANGUS BIG DOGS", "subMenuOption": "CHILI CHEESE DOG", "qty": "2" },
+    { "menuOption": "SIDES", "subMenuOption": "LARGE FRENCH FRIES", "qty": "3" }
+  ]
+}

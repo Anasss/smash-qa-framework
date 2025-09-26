@@ -1,0 +1,44 @@
+{
+  "customerProfiles": [
+    {
+      "id": "default",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "3035551234",
+      "zipCode": "80246"
+    },
+    {
+      "id": "premium",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "phone": "2135557890",
+      "zipCode": "80210"
+    },
+    {
+      "id": "business",
+      "firstName": "Robert",
+      "lastName": "Johnson",
+      "email": "robert.johnson@company.com",
+      "phone": "4155554567",
+      "zipCode": "80246"
+    },
+    {
+      "id": "family",
+      "firstName": "Maria",
+      "lastName": "Garcia",
+      "email": "maria.garcia@family.com",
+      "phone": "7735552468",
+      "zipCode": "80246"
+    },
+    {
+      "id": "student",
+      "firstName": "Alex",
+      "lastName": "Wilson",
+      "email": "alex.wilson@university.edu",
+      "phone": "6465553210",
+      "zipCode": "80246"
+    }
+  ]
+}
