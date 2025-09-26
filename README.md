@@ -7,7 +7,7 @@ End-to-end Playwright tests for Smashburger’s web ordering flow. It follows a 
 1) Clone and install
 
 ```bash
-git clone <repository-url> smash-qa-framework
+git clone https://github.com/Anasss/smash-qa-framework
 cd smash-qa-framework
 npm install
 ```
