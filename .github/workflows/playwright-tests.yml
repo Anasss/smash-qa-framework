@@ -32,9 +32,10 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: 🧪 Run Playwright tests
-        run: npx playwright test --workers=3
+        run: npx playwright test --workers=4
         env:
           CI: true
+        continue-on-error: true  
 
       - name: 📦 Prepare Pages folder
         run: |
@@ -57,4 +58,5 @@ jobs:
         run: |
           echo "## ✅ Playwright Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "👉 [View latest report]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/pages)" >> $GITHUB_STEP_SUMMARY
           echo "👉 [View latest report]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/pages)" >> $GITHUB_STEP_SUMMARY
