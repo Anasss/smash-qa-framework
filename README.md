@@ -1,6 +1,6 @@
 # 🚀 smash-qa-framework
 
-End-to-end Playwright tests for Smashburger’s web ordering flow. It follows a clean Page Object Model with data-driven scenarios, fast semantic locators, and pragmatic stability/performance helpers.
+End-to-end Playwright + TypeScript tests for Smashburger’s web ordering flow. The framework uses a clean Page Object Model (POM) design, data-driven scenarios, fast and semantic locators, and includes pragmatic helpers for test stability, performance, and maintainability.
 
 ## ⚡ Quick start
 
