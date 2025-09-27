@@ -92,3 +92,9 @@ jobs:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+      - name: 📝 Post report URL to summary
+        run: |
+          echo "## ✅ Playwright Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "👉 [View latest report](${{ steps.deployment.outputs.page_url }})" >> $GITHUB_STEP_SUMMARY
