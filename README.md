@@ -57,7 +57,7 @@ npx playwright show-report
 - Run a single spec
 
 ```bash
-npx playwright test tests/order.spec.ts
+npx playwright test tests/pickup-create-your-own-order.spec.ts
 ```
 
 - Headed mode (debug visually)
@@ -76,3 +76,7 @@ npx playwright test -g "Create Your Own"
 
 - HTML report: `npx playwright show-report`
 - Test results (screenshots, traces when enabled): `./test-results/`
+
+## 📖 Documentation
+
+For detailed testing strategy, API observations, and framework notes, see [TESTING.md](https://github.com/Anasss/smash-qa-framework/blob/main/TESTING.md)
