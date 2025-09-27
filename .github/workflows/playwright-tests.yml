@@ -27,7 +27,7 @@ jobs:
       - name: 🎭 Install Playwright browsers
         run: npx playwright install --with-deps
       - name: 🧪 Run Playwright tests
-        run: npx playwright test --workers=4
+        run: npx playwright test --workers=3
         env:
           CI: true
         continue-on-error: true  
