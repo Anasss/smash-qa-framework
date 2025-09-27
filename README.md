@@ -40,17 +40,6 @@ npx playwright show-report
 4. Verify cart → checkout → payment → place order
 5. Verify confirmation (Thank You, order number, options)
 
-## 🧩 Data and fixtures
-
-- Data-driven: scenarios come from JSON in `test-data/` and are typed via helpers in `utils/`.
-- Flows fixture: `bootstrapPickupAtZip(zip)` and `gotoCreateYourOwn()` keep specs focused on assertions.
-
-## 🛡️ Stability and performance
-
-- Network hygiene: blocks analytics/marketing/social noise to reduce flakiness and speed up loads.
-- Resource tweaks: fonts/animations trimmed for consistency.
-- Failure artifacts: screenshots on failure; Playwright HTML report enabled.
-- Optional timing logs: per-step durations for store selection and menu navigation (enable logs via LOG_LEVEL/info).
 
 ## 🧪 Useful run examples
 
