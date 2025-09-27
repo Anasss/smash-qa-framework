@@ -1,59 +1,51 @@
 name: 🎭 Playwright Tests
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 jobs:
   test-and-deploy:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 📦 Checkout code
         uses: actions/checkout@v4
-
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
       - name: 📥 Install dependencies
         run: npm install
-
       - name: 🎭 Install Playwright browsers
         run: npx playwright install --with-deps
-
       - name: 🧪 Run Playwright tests
         run: npx playwright test --workers=4
         env:
           CI: true
         continue-on-error: true  
-
       - name: 📦 Prepare Pages folder
         run: |
           mkdir -p _site
           cp -r playwright-report/* _site/
           ls -la _site
-
       - name: 🏗️ Setup GitHub Pages
-        uses: actions/configure-pages@v3
-
+        uses: actions/configure-pages@v4
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
-
       - name: 🚀 Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-
+        id: deployment
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
       - name: 📝 Post report URL to summary
         run: |
           echo "## ✅ Playwright Report" >> $GITHUB_STEP_SUMMARY
