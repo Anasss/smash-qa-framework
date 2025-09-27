@@ -66,7 +66,7 @@ npx playwright test -g "Create Your Own"
 
 ## 📄 Reports and artifacts
 
-- Live Report: 🌐 anasss.github.io/smash-qa-framework (auto-updated)
+- Live Report: 🌐 [anasss.github.io/smash-qa-framework](https://anasss.github.io/smash-qa-framework/) (auto-updated)
 - Locat report: `npx playwright show-report`
 - Test results (screenshots, traces when enabled): `./test-results/`
 
