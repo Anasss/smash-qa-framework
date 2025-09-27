@@ -12,10 +12,10 @@ permissions:
   id-token: write
 
 jobs:
-  test:
+  test-and-deploy:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📦 Checkout code
         uses: actions/checkout@v4
@@ -36,65 +36,25 @@ jobs:
         env:
           CI: true
 
-      - name: 📊 Upload Playwright Report Artifact
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
-
-      - name: 📸 Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: test-results/
-          retention-days: 30
-
-      - name: 💾 Upload storage state
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: storage-state
-          path: storage/
-          retention-days: 7
-
-  deploy-report:
-    needs: test
-    if: always() && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: 🏗️ Setup GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: 📦 Download Playwright Report
-        uses: actions/download-artifact@v4
-        with:
-          name: playwright-report
-          path: ./playwright-report
-
       - name: 📦 Prepare Pages folder
         run: |
           mkdir -p _site
-          cp -r ./playwright-report/* ./_site/
-          ls -la ./_site
+          cp -r playwright-report/* _site/
+          ls -la _site
 
-      - name: 📤 Upload to Pages
-        uses: actions/upload-pages-artifact@v3
+      - name: 🏗️ Setup GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: 📤 Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./_site
 
       - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v1
 
       - name: 📝 Post report URL to summary
         run: |
           echo "## ✅ Playwright Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "👉 [View latest report](${{ steps.deployment.outputs.page_url }})" >> $GITHUB_STEP_SUMMARY
+          echo "👉 [View latest report]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/pages)" >> $GITHUB_STEP_SUMMARY
