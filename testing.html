@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testing Strategy - Smashburger QA</title>
+  <title>Smash QA Framework - Testing Strategy</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
   <style>
     * {
@@ -112,6 +112,81 @@
     
     .content {
       padding: 60px 50px;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, var(--smash-orange) 0%, var(--smash-burgundy) 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 20px rgba(233, 78, 27, 0.3);
+    }
+
+    .intro-section h2 {
+      color: white;
+      border-bottom: 3px solid white;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    .intro-section p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .intro-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .intro-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .intro-card h3 {
+      color: white;
+      margin: 0 0 15px 0;
+      font-size: 1.3em;
+      text-transform: uppercase;
+    }
+
+    .intro-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .intro-card li {
+      padding: 8px 0;
+      font-size: 1.05em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .intro-card li:last-child {
+      border-bottom: none;
+    }
+
+    .intro-card li::before {
+      content: "✓";
+      margin-right: 10px;
+      font-weight: bold;
+      color: white;
     }
     
     h2 {
@@ -276,6 +351,10 @@
       .nav {
         justify-content: center;
       }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -285,8 +364,8 @@
       <div class="logo-area">
         <div class="logo-circle">🎭</div>
         <div>
-          <h1>Testing Strategy</h1>
-          <p class="tagline">Smashburger UI Automation & Quality Assurance</p>
+          <h1>Smash-QA-Framework</h1>
+          <p class="tagline">End-to-End Testing Strategy & Documentation</p>
         </div>
       </div>
       <div class="nav">
@@ -298,6 +377,51 @@
   
   <div class="container">
     <div class="content">
+      
+      <div class="intro-section">
+        <h2>🎯 Overview</h2>
+		<p>
+		  The <strong>Smash-QA-Framework</strong> is a comprehensive end-to-end test automation solution built with Playwright and TypeScript for testing Smashburger's online ordering platform at <a href="https://dev.smashburger.com/" target="_blank" style="color: white; text-decoration: underline; font-weight: 600;">dev.smashburger.com</a>. This framework validates the complete customer journey from menu browsing to order confirmation, ensuring a flawless digital ordering experience.
+		</p>
+				
+        <div class="intro-grid">
+          <div class="intro-card">
+            <h3>🍔 What We Test</h3>
+            <ul>
+              <li>Complete ordering workflow</li>
+              <li>Custom burger creation</li>
+              <li>Location selection (Pickup)</li>
+              <li>Cart management</li>
+              <li>Checkout & payment flow</li>
+              <li>Order confirmation</li>
+            </ul>
+          </div>
+          
+          <div class="intro-card">
+            <h3>🛠️ How We Test</h3>
+            <ul>
+              <li>Page Object Model (POM)</li>
+              <li>Data-driven scenarios</li>
+              <li>Fixtures for reusability</li>
+              <li>Parallel execution</li>
+              <li>CI/CD integration</li>
+              <li>Automated reporting</li>
+            </ul>
+          </div>
+          
+          <div class="intro-card">
+            <h3>⚡ Key Features</h3>
+            <ul>
+              <li>TypeScript for type safety</li>
+              <li>Semantic locators</li>
+              <li>Fast execution (30s/test)</li>
+              <li>Screenshot on failure</li>
+              <li>GitHub Pages reports</li>
+              <li>Mock data support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       
       <h2>📋 Tech Stack Analysis</h2>
       <p>Based on DOM and network inspection, the Smashburger website (<code>https://dev.smashburger.com</code>) is built with modern, scalable technologies:</p>
