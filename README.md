@@ -3,7 +3,7 @@
 [![CI](https://github.com/Anasss/smash-qa-framework/actions/workflows/playwright-tests.yml/badge.svg)](https://github.com/Anasss/smash-qa-framework/actions)
 [![Playwright Report](https://img.shields.io/badge/Playwright-Report-brightgreen)](https://anasss.github.io/smash-qa-framework/)
 
-End-to-end Playwright + TypeScript tests for Smashburger’s web ordering flow. The framework uses a clean Page Object Model (POM) design, data-driven scenarios, fast and semantic locators, and includes pragmatic helpers for test stability, performance, and maintainability.
+End-to-end Playwright + TypeScript tests for Smashburger’s web ordering flow. The framework uses a clean Page Object Model (POM) design, data-driven scenarios, fast and semantic locators, and includes pragmatic helpers for test stability, performance, and maintainability. https://anasss.github.io/smash-qa-framework/testing.html
 
 ## ⚡ Quick start
 
@@ -69,7 +69,3 @@ npx playwright test -g "Create Your Own"
 - Live Report: 🌐 [anasss.github.io/smash-qa-framework](https://anasss.github.io/smash-qa-framework/) (auto-updated)
 - Locat report: `npx playwright show-report`
 - Test results (screenshots, traces when enabled): `./test-results/`
-
-## 📖 Documentation
-
-For detailed testing strategy, API observations, and framework notes, see [TESTING.md](https://github.com/Anasss/smash-qa-framework/blob/main/TESTING.md)
