@@ -35,6 +35,8 @@ jobs:
         run: |
           mkdir -p _site
           cp -r playwright-report/* _site/
+          cp testing.html _site/
+          echo "✅ File copied to _site"
           ls -la _site
       - name: 🏗️ Setup GitHub Pages
         uses: actions/configure-pages@v4
